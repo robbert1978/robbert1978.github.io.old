@@ -3,10 +3,12 @@
 icon: fas fa-info-circle
 order: 4
 ---
+
 >
+
 # 💻 About
 
-<figure><img src="assets/WtVOjr6.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="assets/img/WtVOjr6.gif" alt=""><figcaption></figcaption></figure>
 
 Information Security at University of Information Technology VNU HCM CITY.
 
