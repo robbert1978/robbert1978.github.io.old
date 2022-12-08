@@ -3,6 +3,13 @@
 icon: fas fa-info-circle
 order: 4
 ---
+>
+# 💻 About
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+<figure><img src="assets/WtVOjr6.gif" alt=""><figcaption></figcaption></figure>
+
+Information Security at University of Information Technology VNU HCM CITY.
+
+Just a boy likes playing CTF =]]
+
+playing for [Green Oninon](https://ctftime.org/team/194346) and [Sarmat](https://ctftime.org/team/185585) (sometimes 🐸).
