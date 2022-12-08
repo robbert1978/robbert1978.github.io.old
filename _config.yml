@@ -20,7 +20,7 @@ timezone: Asia/Ho_Chi_Minh
 
 title: Exploit weird binary # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the sub-title
+tagline: From WannaOne with love # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   I have a shell for you.
@@ -69,7 +69,8 @@ google_analytics:
 #     light  - Use the light color scheme
 #     dark   - Use the dark color scheme
 #
-theme_mode: dark# [light|dark]
+theme_mode: dark
+# [light|dark]
 
 # The CDN endpoint for images.
 # Notice that once it is assigned, the CDN url
