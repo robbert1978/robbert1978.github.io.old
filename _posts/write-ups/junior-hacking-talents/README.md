@@ -1,2 +1,0 @@
-# Junior Hacking Talents
-
