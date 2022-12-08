@@ -15,6 +15,7 @@ Kiểm tra binary
 Kiểm tra libc
 ![Libc](https://i.imgur.com/UnlUE9T.png)
 Ta thấy đề bài đưa libc 2.23
+
 Reverse bằng IDA
 ```c 
 int __cdecl __noreturn main(int argc, const char **argv, const char **envp)
