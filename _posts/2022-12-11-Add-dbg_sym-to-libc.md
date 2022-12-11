@@ -118,6 +118,7 @@ Vào file unstrip_libc.rs ở line 61
 sửa `"2.34"` thành `"2.31"` (theo như mình tìm hiểu thì từ libc 2.31 mới chia thành các file dbg nhỏ khác nhau)
 ### Bước 2: Cài các compiler và thư viện để build
 Chúng ta cần cài `rustc`, `cargo`, `rust-lzma`
+
 Mình xài ubuntu nên mình chạy lệnh
 ```sh 
 sudo apt install rustc cargo rust-lzma-sys
