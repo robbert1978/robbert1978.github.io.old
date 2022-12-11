@@ -20,7 +20,7 @@ Khi gặp nhiều bài ctf cần debug các hàm trong libc, đặc biệt là l
 Sau đây, mình xin trình bày 2 cách để "chữa cháy" lỗi này.
 ## Cách 1: Load debug symbol vào gdb
 Bạn để ý thì pwninit nó cũng tải package libc6-dbg_....deb rồi giải nén ra, mình cũng thử tải package xem sao.
-![](https://i.imgur.com/K4WgOXq.png)
+![File nén](https://i.imgur.com/K4WgOXq.png)
 
 Ta để ý bây giờ file tên là `data.tar.xz` thay vì `data.tar` nên pwninit mới báo lỗi `failed to find file in data.tar`.
 
