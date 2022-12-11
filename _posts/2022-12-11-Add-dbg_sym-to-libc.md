@@ -84,6 +84,7 @@ Enjoy ...
 * Biến `path_of_dbg_files` luôn có `/` ở sau cùng.
 ## Cách 2: Build lại pwninit từ source code
 Đã có [@dp1](https://github.com/dp1/) viết lại code cho libc >=2.34, dù [pull request này đã được chấp nhận](https://github.com/io12/pwninit/pull/282) nhưng mình không hiểu sao tác giả io12 vẫn giữ code cũ và không release ra phiên bản mới.
+
 Mình clone repo https://github.com/dp1/pwninit rồi sửa lại một chút source code.
 
 Trước khi sửa source code thì mình có đọc qua, tác giả dp1 viết code xử lý các trường hợp khi tên file là `data.tar.xz`, `data.tar.gz`, `data,tar.zst` ,gom các file dbg thành 1 file duy nhất (thật là out trình :)) )
