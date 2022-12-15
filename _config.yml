@@ -88,7 +88,7 @@ theme_mode: dark
 
 # the avatar on sidebar, support local or CORS resources
 avatar: "assets/img/avatar.jpg"
-background-image: "assets/img/Screenshot from 2022-12-15 16-22-39.png"
+#background-image: 
 # boolean type, the global switch for ToC in posts.
 toc: true
 
@@ -161,6 +161,7 @@ defaults:
   - scope:
       path: ""
       type: tabs # see `site.collections`
+      image: "assets/img/Screenshot from 2022-12-15 16-22-39.png"
     values:
       layout: page
       permalink: /:title/
