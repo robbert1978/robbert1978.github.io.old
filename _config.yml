@@ -161,10 +161,10 @@ defaults:
   - scope:
       path: ""
       type: tabs # see `site.collections`
-      image: "assets/img/Screenshot from 2022-12-15 16-22-39.png"
     values:
       layout: page
       permalink: /:title/
+      image: "assets/img/Screenshot from 2022-12-15 16-22-39.png"
   - scope:
       path: assets/img/favicons
     values:
