@@ -139,3 +139,5 @@ file libc từ `stripped` đã thành `not stripped` .
 Trong trường hợp không build được ( hoặc lười ), mình đã release binary trên [github](https://github.com/robbert1978/pwninit/releases/tag/3.2.0.1).
 
 Good luck pwning.
+
+P/s: Mình đang viết một [tool](https://github.com/robbert1978/alt-pwninit) thay thế pwninit <(")
