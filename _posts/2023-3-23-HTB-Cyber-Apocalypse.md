@@ -359,7 +359,9 @@ Cách này gần giống như cách trên, [để ý rằng hàm puts gọi strl
 khi gọi `puts("1. Create \n2. Delete \n3. Add value \nAction: ")`
 -> `system("1. Create \n2. Delete \n3. Add value \nAction: ")` ->
 system trả về số âm làm cho len rất lớn, để ý chuỗi đang ở trên .data của ELF -> leak được ELF.
+
 Rất tiếc là cách này không chạy được trên remote :(.
+
 Payload:
 ```python
     for i in range(35):
@@ -681,9 +683,15 @@ edit(p64(0x01),p64(0x30)[::-1],b"B"*0x10+p64(0xd21))
 ```
 
 Mình tạo `Rune_0` với size=0x60 và `Rune_1` với size=0x20.
+
 Khi `edit` `Rune_1` với `new_name` là `\x00\x00\x30` thì `new_idx` sẽ là `0x30`,
+
 nhưng do có `NULL` byte ở `new_name` nên `info.name` vẫn là `NULL` từ đó `vuln_idx=0` 
+
 -> `read(0, Rune_1.info + 8,0x60)` trong khi `Rune_1.info` chỉ là chunk size `0x20` (heap overflow).
+
+Tương tự như bài trước, mình ghi đè `strlen_got = system` , may mắn ở đây là hàm `show` gọi `puts(info+8)` nên mình chỉ cần tạo `Rune` có content là `/bin/sh`
+
 Script:
 ```python
 from pwn import *
