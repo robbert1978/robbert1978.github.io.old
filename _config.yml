@@ -18,9 +18,9 @@ timezone: Asia/Ho_Chi_Minh
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Exploit weird binary # the main title
+title: Newbie dive into binary # the main title
 
-tagline: From WannaOne with love # it will display as the sub-title
+tagline: ┬┴┬┴┤(･_├┬┴┬┴    # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   I have a shell for you.
