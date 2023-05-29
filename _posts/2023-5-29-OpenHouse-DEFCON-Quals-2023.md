@@ -409,7 +409,7 @@ def start():
 	elif args.REMOTE:
 		p=remote(args.HOST,int(args.PORT))
 		libc = ELF("./libc_2.37")
-		p.sendlineafter(b"Ticket please: ",b"ticket{....}")
+		p.sendlineafter(b"Ticket please: ",b"ticket{}")
 	return p
 
 p = start()
