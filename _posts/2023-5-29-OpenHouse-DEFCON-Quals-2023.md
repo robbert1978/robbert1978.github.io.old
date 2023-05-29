@@ -351,7 +351,7 @@ char *__cdecl add_note(char *src)
   *(_DWORD *)&desta->data[(_DWORD)(&dword_3314 - 3141)] = 0;
   ...
   ```
- So confusing. But when debug, you can detect that the `for loop` will stop when the current `Node` has `next` is `NULL`.
+ So confusing. But when debugging, you can detect that the `for loop` will stop when the current `Node` has `next` is `NULL`.
   
  `next` is right after `data`, so when I try fill up 512 bytes to the "final" `Node`.data"  and then `create` a new `Node`, `the final Node`.next = `new Node` addr
  -> read `the final Node`.data can leak `new Node` addr ( leak heap addr)
@@ -367,7 +367,7 @@ log.info(f"leak_heap: {hex(leak_heap)}")
 ```
 ![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/59d09249-2f12-4641-9999-a9bc73722f0f)
 
-Remember the `Node head` addr is on the heap. Overwrite `Node 2`.next to the heap addr that contains `Node head` addr so I can leak the PIE.
+Remember the `Node head` addr is on the heap. Overwritting `Node 2`.next to the heap addr that contains `Node head` addr so I can leak the PIE.
 
 ![image](https://github.com/robbert1978/robbert1978.github.io/assets/31349426/5cc7af36-7012-4108-bbbe-fee5406cffbb)
 
