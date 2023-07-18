@@ -1,5 +1,5 @@
 ---
-title: 'Zer0pts CTF 2023 writeup'
+title: 'Writeup Zer0pts CTF 2023'
 categories:
   - Pwnable
 tags:
