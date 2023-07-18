@@ -1,3 +1,11 @@
+---
+title: 'Write up BFSMatrix Offsensive Con 2023'
+categories:
+  - Pwnable
+tags:
+  - Pwn
+published: true
+---
 # Write up BFSMatrix Offsensive Con 2023
 
 [The original tweet.](https://twitter.com/bluefrostsec/status/1665999954433720321)
