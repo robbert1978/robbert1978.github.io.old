@@ -8,11 +8,9 @@ published: true
 ---
 # Write up BFSMatrix Offsensive Con 2023
 
-[The original tweet.](https://twitter.com/bluefrostsec/status/1665999954433720321)
+[The original tweet](https://twitter.com/bluefrostsec/status/1665999954433720321)
 
 [Attachment](https://static.bluefrostsecurity.de/files/lab/bfsmatrix_offensivecon2023.tgz)
-
-[Exploit code here](https://github.com/robbert1978/kernel_for_fun/tree/main/BFSMatrix)
 
 ```c
 struct matrix
